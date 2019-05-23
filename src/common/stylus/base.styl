@@ -1,9 +1,82 @@
-@import "variable.styl"
-
+@import 'variable.styl'
 body, html
-  line-height: 1
-  font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif, 'Droid Sans Fallback'
-  user-select: none
-  -webkit-tap-highlight-color: transparent
-  background: $color-background
-  color: $color-text
+    line-height 1
+    font-family 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif, 'Droid Sans Fallback'
+    user-select none
+    -webkit-tap-highlight-color transparent
+    background $color-background
+    color $color-text
+/* 禁止选中文本 */
+.usn
+    -webkit-user-select none
+    -moz-user-select none
+    -ms-user-select none
+    -o-user-select none
+    user-select none
+/* 强制不换行 */
+.wn
+    word-wrap normal
+    white-space nowrap
+/* 强制换行 */
+.wb
+    white-space normal
+    word-wrap break-word
+    word-break break-all
+/* 多行文字溢出 适用于webkit内核和移动端 */
+.wes
+    display -webkit-box
+    -webkit-box-orient vertical
+    -webkit-line-clamp 2
+    overflow hidden
+/* 垂直居中 */
+.layout-qz
+    display flex
+    align-items center
+/* 左右居中 */
+.layout-zy
+    display flex
+    justify-content center
+/* 两边排列 */
+.layout-slide
+    display flex
+    align-items center
+    justify-content space-between
+/* 上下排列 */
+.layout-sx
+    display flex
+    flex-direction column
+    justify-content space-between
+/* 横向左右垂直居中 */
+.layout-rc
+    display flex
+    justify-content center
+    align-items center
+/* 横向左右垂直居右 */
+.layout-rr
+    display flex
+    justify-content flex-end
+    align-items center
+/* 纵向左右垂直居中 */
+.layout-cc
+    display flex
+    flex-direction column
+    justify-content center
+    align-items center
+/* 清除浮动 */
+.clearfix::after
+    content ''
+    display block
+    width 0
+    height 0
+    clear both
+    visibility hidden
+/* 溢出部分省略号显示 */
+.ellipsis
+    width 300px
+    text-overflow ellipsis
+    overflow hidden
+    white-space nowrap
+.text-hide
+    text-overflow ellipsis
+    overflow hidden
+    white-space nowrap

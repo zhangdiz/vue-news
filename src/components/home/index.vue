@@ -1,5 +1,7 @@
 <template>
-   <div class='home_wrapper'>首页</div>
+   <div class='home_wrapper'>
+
+   </div>
 </template>
 
 <script>
@@ -12,7 +14,7 @@ export default {
        };
    },
    created() {
-       
+       this.$showToast('啦啦啦')
    },
    methods: {
        
